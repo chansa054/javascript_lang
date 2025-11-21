@@ -2,7 +2,7 @@ const myArr =[1,2,3,4,5]// this is array with the square brakets
 const myArr2=["shaktiman","naagraj"]// we can declare many things
 const myArr3= new Array(1,2,3,4,5,6,7)// this a the another way to decalare the array
 // console.log(myArr[1]);
-
+const emty=[]// declare the empty array
 myArr.push(6);// push at the last
    
 // many other method also 
