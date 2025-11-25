@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyborard press</title>
+    <style>
+      body {
+  margin: 0;                  /* Remove default margin */
+  height: 100vh;              /* Full viewport height */
+  display: flex;              /* Use flexbox for centering */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  background-color: black;    /* Black background */
+}
+
+h1,h2 {
+  color: white;               /* White text for contrast */
+  font-size: 3rem;            /* Make it big and bold */
+  text-align: center;         /* Center text alignment */
+}
+
+ 
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+       <h1>press any key and watch the magic</h1>
+       <h2></h2>
+    </div>
+</body>
+<script>
+   const h2 =document.querySelector('h2');
+   const action = document.querySelector('body').addEventListener('keydown',(event) =>{
+     h2.innerText = `'${event.key ===' '?'space':event.key}'`;
+   })
+</script>
+</html>

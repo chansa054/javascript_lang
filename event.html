@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <div class="contain">
+        <ul class="ul_cl">
+             <li class="first">here I am li 1</li>
+             <li class="second">here I am li 2</li>
+             <li class="third">here I am li 3</li>
+             <li class="four">here I am li 4</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const div = document.getElementsByClassName('contain')[0];
+    const li = document.querySelector('.first');
+
+    div.addEventListener('click', (s) => {
+        console.log(s.target);
+        console.log(s.target.textContent);// here we can control the event with variable s(or you can name it anything)
+    },false);
+
+    li.addEventListener('click', () => {
+      console.log('li clicked');
+    },true);
+
+// so we are using the event listner in place of 'onclick' because we get more feature in addevent listner 
+// one more thing is 'usecapture' it is the third parameter in function it is used to 'true' and 'false'(it is the default)
+
+// if true than it follow the top to bottom root other wise it follow the bottom to top (mean child to parent )
+
+// if we want to prevent any event on the click like (url and other thing) we can use the e.preventDefault();
+// one more function stopPropogation() read it ;
+</script>
+</html>
